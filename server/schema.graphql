@@ -1,0 +1,19 @@
+type Book {
+    id: ID!
+    author: String!
+    title: String!
+    picture: String
+    publisher: String!
+    statuss: [Status!]!
+}
+
+type Status {
+    id: ID!
+    currently: String!
+    icon: String
+    importance: Int!
+}
+
+type Query {
+    books(status: String!): [Book!]!
+}
